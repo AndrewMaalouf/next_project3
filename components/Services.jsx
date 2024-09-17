@@ -2,64 +2,70 @@ import Image from 'next/image';
 
 const Services = () => {
   return (
-    <section className="our-services" id="our-services">
-      <h2 className="service-title">Our Services</h2>
-      <div className="cards container">
-        <div className="card">
-          <a href="#" className="card-link">
-            <div>
+    <section className="py-24 px-8 my-8" id="our-services">
+      <h2 className="text-center text-3xl font-bold">Our Services</h2>
+      <div className="flex flex-wrap justify-around items-stretch mb-16">
+        <div className="bg-gray-100 border border-gray-300 p-4 m-4 flex-1 max-w-[30%] shadow-md text-center group">
+          <a href="#" className="block text-inherit no-underline">
+            <div className="relative flex justify-center items-center">
               <Image
                 src="/card1.jpg"
                 alt="card1"
-                className="card-img"
+                className="rounded-sm transition-transform duration-300 group-hover:scale-105"
                 width={300}
                 height={200}
               />
             </div>
-            <h3>Service 1</h3>
-            <p>
+            <h3 className="text-xl font-semibold mt-4">Service 1</h3>
+            <p className="mt-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="card-button">Show service 1</button>
+            <button className="bg-blue-500 text-white border-none py-3 px-6 mt-4 rounded-md cursor-pointer text-base shadow-md transition-colors duration-300 hover:bg-blue-700 hover:translate-y-[-2px]">
+              Show service 1
+            </button>
           </a>
         </div>
-        <div className="card">
-          <a href="#" className="card-link">
-            <div>
+        <div className="bg-gray-100 border border-gray-300 p-4 m-4 flex-1 max-w-[30%] shadow-md text-center group">
+          <a href="#" className="block text-inherit no-underline">
+            <div className="relative flex justify-center items-center">
               <Image
                 src="/card2.jpg"
                 alt="card2"
-                className="card-img"
+                className="rounded-sm transition-transform duration-300 group-hover:scale-105"
                 width={300}
                 height={200}
               />
             </div>
-            <h3>Service 2</h3>
-            <p>
+            <h3 className="text-xl font-semibold mt-4">Service 2</h3>
+            <p className="mt-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="card-button">Show service 2</button>
+            <button className="bg-blue-500 text-white border-none py-3 px-6 mt-4 rounded-md cursor-pointer text-base shadow-md transition-colors duration-300 hover:bg-blue-700 hover:translate-y-[-2px]">
+              Show service 2
+            </button>
           </a>
         </div>
-        <div className="card">
-          <a href="#" className="card-link">
-            <div>
+        <div className="bg-gray-100 border border-gray-300 p-4 m-4 flex-1 max-w-[30%] shadow-md text-center group">
+          <a href="#" className="block text-inherit no-underline">
+            <div className="relative flex justify-center items-center">
               <Image
                 src="/card3.jpg"
                 alt="card3"
-                className="card-img"
+                className="rounded-sm transition-transform duration-300 group-hover:scale-105"
                 width={300}
                 height={200}
               />
             </div>
-            <h3>Service 3</h3>
-            <p>
+            <h3 className="text-xl font-semibold mt-4">Service 3</h3>
+            <p className="mt-2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="card-button">Show service 3</button>
+            <button className="bg-blue-500 text-white border-none py-3 px-6 mt-4 rounded-md cursor-pointer text-base shadow-md transition-colors duration-300 hover:bg-blue-700 hover:translate-y-[-2px]">
+              Show service 3
+            </button>
           </a>
         </div>
       </div>
