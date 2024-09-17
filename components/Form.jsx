@@ -10,7 +10,7 @@ const Form = () => {
       <h2 className="text-center text-2xl font-semibold mb-5">Contact Us</h2>
 
       <form>
-        <div className="p-8 rounded-lg mx-auto max-w-lg">
+        <div className="form-elements p-8 rounded-lg mx-auto max-w-lg">
           <label htmlFor="name" className="block mb-2 text-sm font-medium">Name:</label>
           <input
             type="text"
@@ -43,12 +43,12 @@ const Form = () => {
             <Calendar
               onChange={onChange}
               value={value}
-              className="react-calendar border border-gray-300 rounded-md bg-white"
+              className="react-calendar w-full max-w-sm sm:max-w-full border border-gray-300 rounded-md bg-white"
             />
           </div>
 
           <div className="flex justify-center">
-            <button type="submit" className="bg-gray-800 text-white py-2 px-6 rounded-md hover:bg-gray-600 transition-colors">
+            <button type="submit" className="form-btn bg-gray-800 text-white py-2 px-6 rounded-md hover:bg-gray-600 transition-colors">
               Submit
             </button>
           </div>

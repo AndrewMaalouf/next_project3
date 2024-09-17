@@ -11,7 +11,7 @@ const Banner = () => {
         layout="fill"
       />
       <div className="absolute inset-0 flex items-center justify-center text-center text-black">
-        <div>
+        <div className='overlay-text'>
           <h1 className="text-3xl font-bold">Welcome to My Page</h1>
           <p className="mt-4">This is the banner section.</p>
         </div>
