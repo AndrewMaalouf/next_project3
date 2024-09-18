@@ -59,18 +59,7 @@ main {
 
 
 
-@media (max-width: 768px) {
-    .cards {
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .card {
-        max-width: 100%;
-        margin: 1em auto;
-    }
+/* @media (max-width: 768px) {
 
     nav ul {
         flex-direction: row;
@@ -81,13 +70,7 @@ main {
         width: 100%;
     }
 
-    .form {
-        height: auto;
-        width: 100%;
-        padding: 1em;
-        margin: auto;
-        border-radius: 0;
-    }
+    
 
     .form-elements {
         height: auto;
@@ -122,4 +105,4 @@ main {
         font-size: calc(24px + 0.8vw);
         white-space: nowrap;
     }
-}
+} */

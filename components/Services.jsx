@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 const Services = () => {
   return (
-    <section className="py-24 px-8 my-8" id="our-services">
+    <section className="py-4 sm:py-24 px-8 my-8" id="our-services">
       <h2 className="text-center text-3xl font-bold">Our Services</h2>
-      <div className="cards container flex flex-wrap justify-around items-stretch mb-16">
-        <div className="card bg-gray-100 border border-gray-300 p-4 m-4 flex-1 max-w-[30%] shadow-md text-center group">
+      <div className="flex-col justify-center md:flex-row container flex flex-wrap justify-around items-stretch mb-16">
+        <div className="max-w-full my-4 md:max-w-[100%] md:my-0 bg-gray-100 border border-gray-300 p-4 m-4 flex-1 shadow-md text-center group">
           <a href="#" className="block text-inherit no-underline">
             <div className="relative flex justify-center items-center">
               <Image
@@ -21,12 +21,12 @@ const Services = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="bg-blue-500 text-white border-none py-3 px-6 mt-4 rounded-md cursor-pointer text-base shadow-md transition-colors duration-300 hover:bg-blue-700 hover:translate-y-[-2px]">
+            <button className="bg-blue-500 text-white border-none py-3 px-6 mt-4 rounded-md cursor-pointer text-base shadow-md transition-colors duration-300 hover:bg-blue-700">
               Show service 1
             </button>
           </a>
         </div>
-        <div className="card bg-gray-100 border border-gray-300 p-4 m-4 flex-1 max-w-[30%] shadow-md text-center group">
+        <div className="max-w-full my-4 md:max-w-[100%] md:my-0 bg-gray-100 border border-gray-300 p-4 m-4 flex-1 shadow-md text-center group">
           <a href="#" className="block text-inherit no-underline">
             <div className="relative flex justify-center items-center">
               <Image
@@ -42,12 +42,12 @@ const Services = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="bg-blue-500 text-white border-none py-3 px-6 mt-4 rounded-md cursor-pointer text-base shadow-md transition-colors duration-300 hover:bg-blue-700 hover:translate-y-[-2px]">
+            <button className="bg-blue-500 text-white border-none py-3 px-6 mt-4 rounded-md cursor-pointer text-base shadow-md transition-colors duration-300 hover:bg-blue-700">
               Show service 2
             </button>
           </a>
         </div>
-        <div className="card bg-gray-100 border border-gray-300 p-4 m-4 flex-1 max-w-[30%] shadow-md text-center group">
+        <div className="max-w-full my-4 md:max-w-[100%] md:my-0 bg-gray-100 border border-gray-300 p-4 m-4 flex-1 shadow-md text-center group">
           <a href="#" className="block text-inherit no-underline">
             <div className="relative flex justify-center items-center">
               <Image
@@ -63,7 +63,7 @@ const Services = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button className="bg-blue-500 text-white border-none py-3 px-6 mt-4 rounded-md cursor-pointer text-base shadow-md transition-colors duration-300 hover:bg-blue-700 hover:translate-y-[-2px]">
+            <button className="bg-blue-500 text-white border-none py-3 px-6 mt-4 rounded-md cursor-pointer text-base shadow-md transition-colors duration-300 hover:bg-blue-700">
               Show service 3
             </button>
           </a>

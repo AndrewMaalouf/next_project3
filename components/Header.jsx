@@ -7,7 +7,7 @@ const Banner = () => {
       <Image
         src="/abstract.jpg"
         alt="banner-image"
-        className="absolute inset-0 object-cover"
+        className="inset-0 object-cover"
         layout="fill"
       />
       <div className="absolute inset-0 flex items-center justify-center text-center text-black">

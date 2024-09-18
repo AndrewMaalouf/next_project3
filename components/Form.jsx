@@ -10,14 +10,14 @@ const Form = () => {
       <h2 className="text-center text-2xl font-semibold mb-5">Contact Us</h2>
 
       <form>
-        <div className="form-elements p-8 rounded-lg mx-auto max-w-lg">
+        <div className="flex flex-col items-center w-[85%] h-auto p-4 mx-auto my-2 p-8 rounded-lg mx-auto max-w-lg">
           <label htmlFor="name" className="block mb-2 text-sm font-medium">Name:</label>
           <input
             type="text"
             id="name"
             name="name"
             required
-            className="w-full p-2 mb-4 border border-gray-300 rounded-md"
+            className="w-[100%] mx-auto my-2 w-full p-2 mb-4 border border-gray-300 rounded-md"
           />
 
           <label htmlFor="email" className="block mb-2 text-sm font-medium">Email:</label>
@@ -26,19 +26,19 @@ const Form = () => {
             id="email"
             name="email"
             required
-            className="w-full p-2 mb-4 border border-gray-300 rounded-md"
+            className="w-[100%] mx-auto my-2 w-full p-2 mb-4 border border-gray-300 rounded-md"
           />
 
-          <label htmlFor="message" className="block mb-2 text-sm font-medium">Message:</label>
+          <label htmlFor="message" className="text-center block mb-2 text-sm font-medium">Message:</label>
           <textarea
             id="message"
             name="message"
             required
-            className="w-full p-2 mb-4 border border-gray-300 rounded-md"
+            className="w-[100%] mx-auto my-2 w-full p-2 mb-4 border border-gray-300 rounded-md"
             rows="6"
           ></textarea>
 
-          <label htmlFor="date" className="block mb-2 text-sm font-medium">Select a Date:</label>
+          <label htmlFor="date" className="text-center block mb-2 text-sm font-medium">Select a Date:</label>
           <div className="w-full mb-4">
             <Calendar
               onChange={onChange}
@@ -48,7 +48,7 @@ const Form = () => {
           </div>
 
           <div className="flex justify-center">
-            <button type="submit" className="form-btn bg-gray-800 text-white py-2 px-6 rounded-md hover:bg-gray-600 transition-colors">
+            <button type="submit" className="mt-8 bg-gray-800 text-white py-2 px-6 rounded-md hover:bg-gray-600 transition-colors">
               Submit
             </button>
           </div>
