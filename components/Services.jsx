@@ -4,8 +4,8 @@ const Services = () => {
   return (
     <section className="py-4 sm:py-24 px-8 my-8" id="our-services">
       <h2 className="text-center text-3xl font-bold">Our Services</h2>
-      <div className="flex-col justify-center md:flex-row container flex flex-wrap justify-around items-stretch mb-16">
-        <div className="max-w-full my-4 md:max-w-[100%] md:my-0 bg-gray-100 border border-gray-300 p-4 m-4 flex-1 shadow-md text-center group">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 container justify-around items-stretch mb-16">
+        <div className="max-w-full my-4 md:my-0 bg-gray-100 border border-gray-300 p-4 m-4 flex-1 shadow-md text-center group">
           <a href="#" className="block text-inherit no-underline">
             <div className="relative flex justify-center items-center">
               <Image
