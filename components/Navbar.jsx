@@ -17,8 +17,8 @@ const Navbar = () => {
                 </Link>
 
                 <ul className="hidden md:flex space-x-8">
-                    <li><Link href="#our-services" className="text-white hover:bg-gray-600 px-3 py-2">Services</Link></li>
-                    <li><Link href="#form" className="text-white hover:bg-gray-600 px-3 py-2">Contact</Link></li>
+                    <li><Link href="/services" className="text-white hover:bg-gray-600 px-3 py-2">Services</Link></li>
+                    <li><Link href="/contact" className="text-white hover:bg-gray-600 px-3 py-2">Contact</Link></li>
                 </ul>
 
                 <div className="md:hidden">
@@ -40,12 +40,12 @@ const Navbar = () => {
 
                     <ul className="space-y-8 text-center text-xl">
                         <li>
-                            <Link href="#our-services" onClick={toggleMobileMenu}>
+                            <Link href="/services" onClick={toggleMobileMenu}>
                                 Our Services
                             </Link>
                         </li>
                         <li>
-                            <Link href="#form" onClick={toggleMobileMenu}>
+                            <Link href="/contact" onClick={toggleMobileMenu}>
                                 Contact Us
                             </Link>
                         </li>

@@ -15,9 +15,11 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <Header />
-        <Services />
-        <Form />
+        <Header
+          img="/abstract.jpg"
+          title="Welcome to My Website"
+          text="You can check our services and contact us!"
+        />
       </main>
       <Footer />
     </>

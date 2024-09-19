@@ -6,11 +6,11 @@ const Form = () => {
   const [value, onChange] = useState(new Date());
 
   return (
-    <section id="form" className="bg-gray-100 p-8 rounded-lg w-full mx-auto">
+    <section id="form" className="bg-gray-100 rounded-lg w-full mx-auto">
       <h2 className="text-center text-2xl font-semibold mb-5">Contact Us</h2>
 
       <form>
-        <div className="flex flex-col items-center h-auto mx-auto my-2 p-8 rounded-lg mx-auto max-w-lg">
+        <div className="flex flex-col items-center h-auto mx-auto my-2 rounded-lg mx-auto max-w-lg">
           <label htmlFor="name" className="block mb-2 text-sm font-medium">Name:</label>
           <input
             type="text"
