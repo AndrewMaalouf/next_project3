@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Form from "@/components/Form";
 import Header from "@/components/Header";
 import Services from "@/components/Services";
+import FilteredServices from "@/components/FilteredServices";
 
 export default function Contact() {
 
@@ -34,6 +35,7 @@ export default function Contact() {
                 <Services services={services} 
                     servicesTitle={"Check our services"}
                 />
+                <FilteredServices services={services}/>
             </main>
             <Footer />
         </>
