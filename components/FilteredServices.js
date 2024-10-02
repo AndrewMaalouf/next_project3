@@ -50,7 +50,7 @@ const FilteredServices = ({ services }) => {
     } else {
       setVisibleServices((prev) => prev.filter((key) => key !== serviceKey));
     }
-    setShowResults(false); // Reset results visibility when checkbox changes
+    setShowResults(false); 
   };
 
   const handleShowResultsClick = () => {
@@ -74,27 +74,27 @@ const FilteredServices = ({ services }) => {
 
   return (
     <section className="py-4 sm:py-24 px-8 my-8 container">
-      {/* FilterServices component */}
+
       <FilterServices onFilterChange={handleFilterChange} />
 
-      {/* Show Results Button */}
+
       <div className="flex justify-center mb-8">
         <button
           className={`bg-blue-500 text-white border-none py-2 px-6 rounded-md cursor-pointer shadow-md transition-colors duration-300 hover:bg-blue-700 ${visibleServices.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
-          disabled={visibleServices.length === 0} // Disable if no services are selected
+          disabled={visibleServices.length === 0} 
           onClick={handleShowResultsClick}
         >
           Show Results
         </button>
       </div>
 
-      {/* Display Services when Show Results is clicked */}
+
       {showResults && visibleServices.length > 0 && (
         <div className="mt-8">
           {visibleServices.map((serviceKey, index) => (
             <div key={index} className="mb-8">
               
-              {/* Image */}
+
               <div className="flex justify-center mb-4">
                 <Image
                   src={serviceDetails[serviceKey].imageSrc}
@@ -105,14 +105,14 @@ const FilteredServices = ({ services }) => {
                 />
               </div>
 
-              {/* Button */}
+
               <div className="flex justify-center mb-4">
                 <button className="bg-blue-500 text-white border-none py-2 px-6 rounded-md cursor-pointer shadow-md transition-colors duration-300 hover:bg-blue-700">
                   Learn More
                 </button>
               </div>
 
-              {/* Description */}
+
               <p className="text-lg text-center">{serviceDetails[serviceKey].description}</p>
             </div>
           ))}
