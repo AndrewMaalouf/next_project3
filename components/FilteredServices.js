@@ -42,13 +42,19 @@ const FilterServices = ({ onFilterChange }) => {
 
 const FilteredServices = ({ services }) => {
   const [visibleServices, setVisibleServices] = useState([]);
+  const [showResults, setShowResults] = useState(false);
 
   const handleFilterChange = (serviceKey, isChecked) => {
     if (isChecked) {
-      setVisibleServices((prev) => [...prev, serviceKey]); // Add service to visibleServices when checkbox is checked
+      setVisibleServices((prev) => [...prev, serviceKey]);
     } else {
-      setVisibleServices((prev) => prev.filter((key) => key !== serviceKey)); // Remove service from visibleServices when checkbox is unchecked
+      setVisibleServices((prev) => prev.filter((key) => key !== serviceKey));
     }
+    setShowResults(false); // Reset results visibility when checkbox changes
+  };
+
+  const handleShowResultsClick = () => {
+    setShowResults(true);
   };
 
   const serviceDetails = {
@@ -68,32 +74,50 @@ const FilteredServices = ({ services }) => {
 
   return (
     <section className="py-4 sm:py-24 px-8 my-8 container">
+      {/* FilterServices component */}
       <FilterServices onFilterChange={handleFilterChange} />
 
-      <div className="mt-8">
-        {visibleServices.map((serviceKey, index) => (
-          <div key={index} className="mb-8">
-
-            <div className="flex justify-center mb-4">
-              <Image
-                src={serviceDetails[serviceKey].imageSrc}
-                alt={`Image for ${serviceKey}`}
-                width={300}
-                height={200}
-                className="rounded-md"
-              />
-            </div>
-
-            <div className="flex justify-center mb-4">
-              <button className="bg-blue-500 text-white border-none py-2 px-6 rounded-md cursor-pointer shadow-md transition-colors duration-300 hover:bg-blue-700">
-                Learn More
-              </button>
-            </div>
-
-            <p className="text-lg text-center">{serviceDetails[serviceKey].description}</p>
-          </div>
-        ))}
+      {/* Show Results Button */}
+      <div className="flex justify-center mb-8">
+        <button
+          className={`bg-blue-500 text-white border-none py-2 px-6 rounded-md cursor-pointer shadow-md transition-colors duration-300 hover:bg-blue-700 ${visibleServices.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          disabled={visibleServices.length === 0} // Disable if no services are selected
+          onClick={handleShowResultsClick}
+        >
+          Show Results
+        </button>
       </div>
+
+      {/* Display Services when Show Results is clicked */}
+      {showResults && visibleServices.length > 0 && (
+        <div className="mt-8">
+          {visibleServices.map((serviceKey, index) => (
+            <div key={index} className="mb-8">
+              
+              {/* Image */}
+              <div className="flex justify-center mb-4">
+                <Image
+                  src={serviceDetails[serviceKey].imageSrc}
+                  alt={`Image for ${serviceKey}`}
+                  width={300}
+                  height={200}
+                  className="rounded-md"
+                />
+              </div>
+
+              {/* Button */}
+              <div className="flex justify-center mb-4">
+                <button className="bg-blue-500 text-white border-none py-2 px-6 rounded-md cursor-pointer shadow-md transition-colors duration-300 hover:bg-blue-700">
+                  Learn More
+                </button>
+              </div>
+
+              {/* Description */}
+              <p className="text-lg text-center">{serviceDetails[serviceKey].description}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };
