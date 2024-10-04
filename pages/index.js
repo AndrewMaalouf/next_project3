@@ -9,7 +9,14 @@ import Services from "@/components/Services";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
+import React from "react";
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
+
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -35,6 +42,10 @@ export default function Home() {
       description: "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular.",
     },
   ];
+  
+  const [open, setOpen] = React.useState(1);
+ 
+  const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
     <>
@@ -49,62 +60,60 @@ export default function Home() {
         <Services services={services} servicesTitle={"Our Services"} />
         <Form />
 
-        {/* Swiper with images */}
-        <Swiper
-  modules={[Navigation, Pagination, Scrollbar, A11y]}
-  spaceBetween={50}
-  slidesPerView={3}
-  navigation
-  pagination={{ clickable: true }}
-  scrollbar={{ draggable: true }}
-  onSwiper={(swiper) => console.log(swiper)}
-  onSlideChange={() => console.log('slide change')}
->
-  <SwiperSlide>
-    <div className="w-[200px] h-[200px]">
-      <Image
-        src="/img1.jpg"
-        alt="image1"
-        width={200}
-        height={200}
-        className="object-cover w-full h-full"
-      />
-    </div>
-  </SwiperSlide>
-  <SwiperSlide>
-    <div className="w-[200px] h-[200px]">
-      <Image
-        src="/img2.jpg"
-        alt="image2"
-        width={200}
-        height={200}
-        className="object-cover w-full h-full"
-      />
-    </div>
-  </SwiperSlide>
-  <SwiperSlide>
-    <div className="w-[200px] h-[200px]">
-      <Image
-        src="/img3.jpg"
-        alt="image3"
-        width={200}
-        height={200}
-        className="object-cover w-full h-full"
-      />
-    </div>
-  </SwiperSlide>
-  <SwiperSlide>
-    <div className="w-[200px] h-[200px]">
-      <Image
-        src="/img4.jpg"
-        alt="image4"
-        width={300}
-        height={200}
-        className="object-cover w-full h-full"
-      />
-    </div>
-  </SwiperSlide>
-</Swiper>
+        <div className="container mx-auto my-12"> 
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={2}
+            slidesPerView={3}
+            navigation
+            pagination={{ clickable: true }}
+          >
+            <SwiperSlide>
+              <div className="w-[300px] h-[300px]">
+                <Image
+                  src="/img1.jpg"
+                  alt="image1"
+                  width={300}
+                  height={300}
+                  className="object-cover w-full h-full no-underline"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[300px] h-[300px]">
+                <Image
+                  src="/img2.jpg"
+                  alt="image2"
+                  width={300}
+                  height={300}
+                  className="object-cover w-full h-full no-underline"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[300px] h-[300px]">
+                <Image
+                  src="/img3.jpg"
+                  alt="image3"
+                  width={300}
+                  height={300}
+                  className="object-cover w-full h-full no-underline"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-[300px] h-[300px]">
+                <Image
+                  src="/img4.jpg"
+                  alt="image4"
+                  width={300}
+                  height={300}
+                  className="object-cover w-full h-full no-underline"
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </main>
       <Footer />
     </>
