@@ -9,6 +9,12 @@ import Services from "@/components/Services";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 import React from "react";
 import {
   Accordion,
@@ -17,14 +23,16 @@ import {
 } from "@material-tailwind/react";
 
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+
+  const [open, setOpen] = React.useState(1);
+
+  const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
+
   const services = [
     {
       imageSrc: "/card1.jpg",
@@ -42,10 +50,6 @@ export default function Home() {
       description: "Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular.",
     },
   ];
-  
-  const [open, setOpen] = React.useState(1);
- 
-  const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
     <>
@@ -60,13 +64,13 @@ export default function Home() {
         <Services services={services} servicesTitle={"Our Services"} />
         <Form />
 
-        <div className="container mx-auto my-12"> 
+        <div className="container mx-auto my-12">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={2}
             slidesPerView={3}
             navigation
-            pagination={{ clickable: true }}
+          // pagination={{ clickable: true }}
           >
             <SwiperSlide>
               <div className="w-[300px] h-[300px]">
@@ -112,7 +116,66 @@ export default function Home() {
                 />
               </div>
             </SwiperSlide>
+
+            <style js global>{`
+                .swiper-button-next,
+                .swiper-button-prev {
+                  color: #475569; 
+                }
+
+                .swiper-button-next:hover,
+                .swiper-button-prev:hover {
+                  color: #7e57c2; 
+                }
+            `}</style>
+
           </Swiper>
+
+        </div>
+
+
+        <div className="container mx-auto my-12">
+          <Accordion open={open === 1} className="mb-2 rounded-lg border border-blue-gray-100 px-4 bg-slate-400">
+            <AccordionHeader
+              onClick={() => handleOpen(1)}
+              className={`border-b-0 transition-colors ${open === 1 ? "hover:text-violet-600" : ""
+                }`}
+            >
+              What We Provide?
+            </AccordionHeader>
+            <AccordionBody className="pt-0 text-base font-normal text-white">
+              We provide cutting-edge AI solutions that revolutionize industries, from healthcare to finance. Our advanced algorithms and
+              machine learning models enable businesses to make data-driven decisions, optimize operations, and drive innovation.
+            </AccordionBody>
+          </Accordion>
+          <Accordion open={open === 2} className="mb-2 rounded-lg border border-blue-gray-100 px-4 bg-slate-400">
+            <AccordionHeader
+              onClick={() => handleOpen(2)}
+              className={`border-b-0 transition-colors ${open === 2 ? "hover:text-violet-600" : ""
+                }`}
+            >
+              Our Technologies
+            </AccordionHeader>
+            <AccordionBody className="pt-0 text-base font-normal text-white">
+            Our cutting-edge technologies harness the power of artificial intelligence and machine learning to revolutionize industries. 
+            From natural language processing to computer vision, our innovative solutions drive efficiency, enhance decision-making,
+            and unlock new possibilities.
+            </AccordionBody>
+          </Accordion>
+          <Accordion open={open === 3} className="rounded-lg border border-blue-gray-100 px-4 bg-slate-400">
+            <AccordionHeader
+              onClick={() => handleOpen(3)}
+              className={`border-b-0 transition-colors ${open === 3 ? "hover:text-violet-600" : ""
+                }`}
+            >
+              Why Choose Us
+            </AccordionHeader>
+            <AccordionBody className="pt-0 text-base font-normal text-white">
+            Our team of dedicated experts brings a unique blend of creativity, technical prowess, and industry knowledge to every project.
+            We are passionate about delivering innovative solutions that exceed your expectations. With a focus on quality, efficiency,
+            and client satisfaction, we are your trusted partner for success.
+            </AccordionBody>
+          </Accordion>
         </div>
       </main>
       <Footer />
