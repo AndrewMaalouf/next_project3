@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Services = ({ services, servicesTitle }) => {
   return (
     <section className="py-4 sm:py-24 px-8 my-8 container" id="our-services">
-      <h2 className="text-center text-3xl font-bold ">{servicesTitle}</h2>
+      <h2 className="text-center text-3xl font-bold pb-4">{servicesTitle}</h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 justify-around items-stretch mb-16">
         {services.map((service, index) => (
           <div

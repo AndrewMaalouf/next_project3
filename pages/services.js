@@ -4,6 +4,7 @@ import Form from "@/components/Form";
 import Header from "@/components/Header";
 import Services from "@/components/Services";
 import FilteredServices from "@/components/FilteredServices";
+import Filter from "@/components/Filter";
 
 export default function Contact() {
 
@@ -36,6 +37,7 @@ export default function Contact() {
                     servicesTitle={"Check our services"}
                 />
                 <FilteredServices services={services}/>
+                <Filter />
             </main>
             <Footer />
         </>

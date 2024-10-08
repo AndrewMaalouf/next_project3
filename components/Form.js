@@ -6,8 +6,8 @@ const Form = () => {
   const [value, onChange] = useState(new Date());
 
   return (
-    <section id="form" className="bg-gray-100 rounded-lg w-full mx-auto px-4 sm:px-6 "> 
-      <h2 className="text-center text-2xl font-semibold mb-5">Contact Us</h2>
+    <section id="form" className="bg-gray-100 rounded-lg w-full mx-auto px-4 sm:px-6"> 
+      <h2 className="text-center text-2xl font-semibold mb-5 pt-4">Contact Us</h2>
 
       <form>
         <div className="flex flex-col items-center h-auto mx-auto my-2 rounded-lg max-w-lg">
@@ -48,7 +48,7 @@ const Form = () => {
           </div>
 
           <div className="flex justify-center">
-            <button type="submit" className="mt-8 bg-gray-800 text-white py-2 px-6 rounded-md hover:bg-gray-600 transition-colors">
+            <button type="submit" className="mt-8 bg-gray-800 text-white py-2 px-6 rounded-md hover:bg-gray-600 transition-colors mb-5">
               Submit
             </button>
           </div>
