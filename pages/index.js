@@ -56,13 +56,21 @@ export default function Home() {
         <div className="container mx-auto my-12">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={2}
+            spaceBetween={10}
             slidesPerView={3}
             navigation
-          // pagination={{ clickable: true }}
+            // pagination={{ clickable: true }}
+            breakpoints={{
+              640: {
+                slidesPerView: 3, 
+              },
+              0: {
+                slidesPerView: 1, 
+              },
+            }}
           >
             <SwiperSlide>
-              <div className="w-[300px] h-[300px]">
+              <div className="h-[300px]">
                 <Image
                   src="/img1.jpg"
                   alt="image1"
@@ -73,7 +81,7 @@ export default function Home() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[300px] h-[300px]">
+              <div className="h-[300px]">
                 <Image
                   src="/img2.jpg"
                   alt="image2"
@@ -84,7 +92,7 @@ export default function Home() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[300px] h-[300px]">
+              <div className="h-[300px]">
                 <Image
                   src="/img3.jpg"
                   alt="image3"
@@ -95,7 +103,7 @@ export default function Home() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="w-[300px] h-[300px]">
+              <div className="h-[300px]">
                 <Image
                   src="/img4.jpg"
                   alt="image4"
@@ -106,19 +114,19 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            <style js global>{`
-                .swiper-button-next,
-                .swiper-button-prev {
-                  color: #475569; 
-                }
+            <style jsx global>{`
+              .swiper-button-next,
+              .swiper-button-prev {
+                color: #475569;
+              }
 
-                .swiper-button-next:hover,
-                .swiper-button-prev:hover {
-                  color: #7e57c2; 
-                }
-            `}</style>
-
+              .swiper-button-next:hover,
+              .swiper-button-prev:hover {
+                color: #7e57c2;
+              }
+        `}</style>
           </Swiper>
+
 
         </div>
 

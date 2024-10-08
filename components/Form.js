@@ -6,18 +6,18 @@ const Form = () => {
   const [value, onChange] = useState(new Date());
 
   return (
-    <section id="form" className="bg-gray-100 rounded-lg w-full mx-auto">
+    <section id="form" className="bg-gray-100 rounded-lg w-full mx-auto px-4 sm:px-6 "> 
       <h2 className="text-center text-2xl font-semibold mb-5">Contact Us</h2>
 
       <form>
-        <div className="flex flex-col items-center h-auto mx-auto my-2 rounded-lg mx-auto max-w-lg">
+        <div className="flex flex-col items-center h-auto mx-auto my-2 rounded-lg max-w-lg">
           <label htmlFor="name" className="block mb-2 text-sm font-medium">Name:</label>
           <input
             type="text"
             id="name"
             name="name"
             required
-            className="w-[100%] mx-auto my-2 w-full p-2 mb-4 border border-gray-300 rounded-md"
+            className="w-full p-2 mb-4 border border-gray-300 rounded-md sm:w-[90%] sm:mb-4 lg:w-[100%]"  
           />
 
           <label htmlFor="email" className="block mb-2 text-sm font-medium">Email:</label>
@@ -26,7 +26,7 @@ const Form = () => {
             id="email"
             name="email"
             required
-            className="w-[100%] mx-auto my-2 w-full p-2 mb-4 border border-gray-300 rounded-md"
+            className="w-full p-2 mb-4 border border-gray-300 rounded-md sm:w-[90%] sm:mb-4 lg:w-[100%]"  
           />
 
           <label htmlFor="message" className="text-center block mb-2 text-sm font-medium">Message:</label>
@@ -34,7 +34,7 @@ const Form = () => {
             id="message"
             name="message"
             required
-            className="w-[100%] mx-auto my-2 w-full p-2 mb-4 border border-gray-300 rounded-md"
+            className="w-full p-2 mb-4 border border-gray-300 rounded-md sm:w-[90%] sm:mb-4 lg:w-[100%]"  
             rows="6"
           ></textarea>
 
@@ -43,7 +43,7 @@ const Form = () => {
             <Calendar
               onChange={onChange}
               value={value}
-              className="react-calendar w-full max-w-sm sm:max-w-full border border-gray-300 rounded-md bg-white"
+              className="react-calendar w-full max-w-sm sm:max-w-[90%] lg:max-w-[100%] border border-gray-300 rounded-md bg-white"
             />
           </div>
 
